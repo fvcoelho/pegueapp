@@ -1,199 +1,184 @@
-import { Phone, Mail, Linkedin, Github, Calendar, Briefcase, GraduationCap, Globe } from 'lucide-react';
+import Link from "next/link"
+import { ArrowRight, Code, Smartphone, Cloud, Zap, Shield, Users } from "lucide-react"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Header Section */}
-        <header className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 sm:p-8 mb-6">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-2">
-            Fabio Coelho
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-4">Full Stack Developer</p>
-          
-          <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4" />
-              <span>+55 11-96316-6165</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:fvcoelho@gmail.com" className="hover:text-blue-600 dark:hover:text-blue-400">
-                fvcoelho@gmail.com
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <Linkedin className="w-4 h-4" />
-              <a href="https://www.linkedin.com/in/fvcoelho/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400">
-                LinkedIn
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <Github className="w-4 h-4" />
-              <a href="https://github.com/fvcoelho/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400">
-                GitHub
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              <span>Born: 04/09/1976</span>
+    <>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              Build Better Software,
+              <span className="text-blue-600 dark:text-blue-400"> Faster</span>
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with professional software development solutions. 
+              From web applications to mobile apps and cloud infrastructure, we deliver 
+              excellence at every step.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                View Our Work
+              </Link>
             </div>
           </div>
-        </header>
+        </div>
+      </section>
 
-        {/* Career Objective */}
-        <section className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 sm:p-8 mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Briefcase className="w-6 h-6" />
-            Career Objective
-          </h2>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            As a Full Stack Developer with more than two decades of software development experience and technical proficiency across a wide range of technologies, my aim is to contribute my extensive expertise to innovative projects. I am dedicated to adhering to Agile practices, Scrum, and various software development methodologies. My skillset has evolved to include more recent technologies such as Mobile/Web development using Xamarin and Blazor. In addition to my proficiency in C#, JavaScript, Node.js, React, React-Native, SQL, MySQL, MongoDB, and SOLID principles, I also possess advanced knowledge of cloud architecture, AWS, Docker deployment, Nginx, and best practices in the realm of DevOps.
-          </p>
-        </section>
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Comprehensive software solutions tailored to your business needs
+            </p>
+          </div>
 
-        {/* Experience */}
-        <section className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 sm:p-8 mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-            <Briefcase className="w-6 h-6" />
-            Experience
-          </h2>
-          <div className="space-y-6">
-            {experiences.map((exp, index) => (
-              <div key={index} className="border-l-4 border-blue-500 pl-4">
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white">{exp.company}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-1">{exp.period} - {exp.position}</p>
-                <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300 text-sm">
-                  {exp.duties.map((duty, idx) => (
-                    <li key={idx}>{duty}</li>
-                  ))}
-                </ul>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="relative group bg-gray-50 dark:bg-gray-900 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-lg mb-4">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  {service.description}
+                </p>
+                <Link
+                  href="/services"
+                  className="text-blue-600 dark:text-blue-400 font-medium inline-flex items-center hover:underline"
+                >
+                  Learn more
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Education */}
-        <section className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 sm:p-8 mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <GraduationCap className="w-6 h-6" />
-            Education
-          </h2>
-          <div className="space-y-3">
-            <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white">
-                Postgraduate MBA in Service-oriented Architecture (SOA)
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">FIAP (2015-2016)</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white">
-                Master&apos;s Degree in Computer Science
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">Universidade São Marcos (1998-2002)</p>
-            </div>
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Why Choose PegueApp
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Delivering excellence through expertise, innovation, and commitment
+            </p>
           </div>
-        </section>
 
-        {/* Languages */}
-        <section className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 sm:p-8">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <Globe className="w-6 h-6" />
-            Languages
-          </h2>
-          <div className="space-y-2">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <span className="text-gray-700 dark:text-gray-300">Portuguese (Brazil) - Fluent</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-gray-700 dark:text-gray-300">English - Advanced spoken</span>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center w-10 h-10 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-md">
+                    {feature.icon}
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-        </section>
-      </div>
-    </div>
-  );
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600 dark:bg-blue-700">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how we can help you achieve your software development goals
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-100 transition-colors"
+          >
+            Get in Touch
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
+    </>
+  )
 }
 
-const experiences = [
+const services = [
   {
-    company: "Ativata Software",
-    period: "January 2022 to Present",
-    position: "Senior Software Engineering",
-    duties: [
-      "Led mobile development for the Xamarin mobile app \"Kyodai Remittance,\" overseeing its creation and deployment on both the Apple Store and Google Play.",
-      "Web application \"OnlineReg,\" utilizing Blazor for seamless integration of front-end and back-end components"
-    ]
+    icon: <Code className="h-6 w-6" />,
+    title: "Web Development",
+    description: "Custom web applications built with modern frameworks and best practices for optimal performance and user experience."
   },
   {
-    company: "Lopes Consultoria de Imóveis",
-    period: "January 2021 to August 2022",
-    position: "Senior Software Engineering",
-    duties: [
-      "Worked within the Lopes Labs division, overseeing the maintenance of the CRM sales system.",
-      "Led project to integrate \"Pagadorias\" with the sales system, involving front-end development, SQL server integration and APIs.",
-      "Responsible for architecture and development of new gateway payments and APIs."
-    ]
+    icon: <Smartphone className="h-6 w-6" />,
+    title: "Mobile Apps",
+    description: "Native and cross-platform mobile applications that deliver seamless experiences across iOS and Android devices."
   },
   {
-    company: "E-Deploy",
-    period: "May 2020 to January 2021",
-    position: "Senior Software Engineer",
-    duties: [
-      "System development, using Python and React JS, for store management of customers focused on food service",
-      "Integration with major food delivery services",
-      "Creation of Docker environment for our services for development and QA"
-    ]
-  },
-  {
-    company: "PegueLa",
-    period: "February 2018 to December 2019",
-    position: "Founder (Developer)",
-    duties: [
-      "Successfully founded and managed a marketplace application for small businesses across platforms.",
-      "Utilized Node.js for back-end development, MongoDB for the database, and React and React-Native for front-end interfaces."
-    ]
-  },
-  {
-    company: "Grupo LTM",
-    period: "July 2014 to February 2018",
-    position: "Senior C# .Net Developer / System Architect",
-    duties: [
-      "Led the development of loyalty campaigns for diverse clients, including Shell, Panasonic, FMC, Amanco, Ajinomoto, BMW, and \"Cielo fidelidade.\""
-    ]
-  },
-  {
-    company: "Instituto Unibanco (Itaú)",
-    period: "September 2013 to June 2014",
-    position: "C# .Net Developer / System Analyst",
-    duties: [
-      "Contributed to the \"Sistema Jovem de Futuro\" project, an e-learning platform utilizing Moodle with PHP and MySQL."
-    ]
-  },
-  {
-    company: "SKY Brasil",
-    period: "March 2012 to September 2013",
-    position: "VB.Net Developer / System Analyst",
-    duties: [
-      "Automated and validated content for the \"Electronic Guide\" using a VB.Net application, integrating with SOAP Web Server and MS SQL Server."
-    ]
-  },
-  {
-    company: "Orbium NetCallCenter",
-    period: "May 2008 to March 2012",
-    position: "C# .Net Developer / Data Analyst",
-    duties: [
-      "Developed customizable CRM integration modules and reports for esteemed clients including B2W, Weber Quartzolit, Ecoesfera, MetLife Saúde e Previdência, and others."
-    ]
-  },
-  {
-    company: "Nucleotec",
-    period: "December 2006 to May 2008",
-    position: "VB Web Developer / Data Analyst",
-    duties: [
-      "Developed and analyzed process flows (WorkFlow) using Visual Basic (VB.NET) for insurance companies Liberty and ACE."
-    ]
+    icon: <Cloud className="h-6 w-6" />,
+    title: "Cloud Solutions",
+    description: "Scalable cloud infrastructure and DevOps solutions using AWS, Docker, and modern deployment practices."
   }
-];
+]
+
+const features = [
+  {
+    icon: <Zap className="h-5 w-5" />,
+    title: "20+ Years Experience",
+    description: "Decades of expertise in software development across various industries and technologies."
+  },
+  {
+    icon: <Shield className="h-5 w-5" />,
+    title: "Proven Track Record",
+    description: "Successfully delivered projects for startups to enterprise clients with consistent quality."
+  },
+  {
+    icon: <Users className="h-5 w-5" />,
+    title: "Agile Approach",
+    description: "Following Scrum and Agile methodologies for efficient project delivery and client collaboration."
+  },
+  {
+    icon: <Code className="h-5 w-5" />,
+    title: "Modern Tech Stack",
+    description: "Expertise in React, Node.js, .NET, and cloud technologies for cutting-edge solutions."
+  },
+  {
+    icon: <Shield className="h-5 w-5" />,
+    title: "Best Practices",
+    description: "SOLID principles, clean architecture, and industry standards for maintainable code."
+  },
+  {
+    icon: <Zap className="h-5 w-5" />,
+    title: "Fast Delivery",
+    description: "Efficient development process ensuring timely delivery without compromising quality."
+  }
+]
