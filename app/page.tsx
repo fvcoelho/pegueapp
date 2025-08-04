@@ -117,7 +117,7 @@ export default function Home() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how we can help you achieve your software development goals
+            Let&apos;s discuss how we can help you achieve your software development goals
           </p>
           <Link
             href="/contact"

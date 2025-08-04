@@ -29,7 +29,7 @@ export default function AboutPage() {
               a comprehensive software development consultancy.
             </p>
             <p className="mb-4">
-              Our journey started with the development of "PegueLa," an innovative marketplace application 
+              Our journey started with the development of &quot;PegueLa,&quot; an innovative marketplace application 
               designed to connect small businesses with their customers. This experience taught us the 
               importance of understanding business needs deeply and building solutions that truly make 
               a difference.
@@ -103,10 +103,10 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Let's Build Something Amazing Together
+          Let&apos;s Build Something Amazing Together
         </h2>
         <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-          Ready to turn your ideas into reality? We're here to help.
+          Ready to turn your ideas into reality? We&apos;re here to help.
         </p>
         <a
           href="/contact"

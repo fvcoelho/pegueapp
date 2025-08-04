@@ -43,7 +43,7 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Ready to start your project? Let's discuss how we can help bring your ideas to life.
+            Ready to start your project? Let&apos;s discuss how we can help bring your ideas to life.
           </p>
         </div>
       </section>

@@ -11,7 +11,7 @@ export default function PortfolioPage() {
             Our Portfolio
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Explore our successful projects and see how we've helped businesses transform their ideas into reality
+            Explore our successful projects and see how we&apos;ve helped businesses transform their ideas into reality
           </p>
         </div>
       </section>
@@ -119,7 +119,7 @@ export default function PortfolioPage() {
               className="bg-gray-50 dark:bg-gray-900 rounded-lg p-8"
             >
               <blockquote className="text-gray-600 dark:text-gray-300 mb-4">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </blockquote>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -143,7 +143,7 @@ export default function PortfolioPage() {
           Ready to Join Our Success Stories?
         </h2>
         <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-          Let's work together to create your next successful project
+          Let&apos;s work together to create your next successful project
         </p>
         <Link
           href="/contact"
